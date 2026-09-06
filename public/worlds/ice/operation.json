@@ -1,0 +1,70 @@
+{
+  "operation_id": "01b83ad7-8819-4463-bee9-9a6efdaff416",
+  "created_at": "2026-09-05T23:09:33Z",
+  "updated_at": "2026-09-05T23:20:14Z",
+  "expires_at": "2026-09-06T02:09:33Z",
+  "done": true,
+  "error": null,
+  "metadata": {
+    "progress": {
+      "status": "SUCCEEDED",
+      "description": "World generation completed successfully"
+    },
+    "world_id": "af15b28e-6f3d-40c7-869a-cb24765e2023",
+    "operation_type": "world_generation",
+    "public_model_name": "marble-1.1"
+  },
+  "response": {
+    "world_id": "af15b28e-6f3d-40c7-869a-cb24765e2023",
+    "display_name": "",
+    "tags": null,
+    "assets": {
+      "mesh": {
+        "collider_mesh_url": "https://cdn.marble.worldlabs.ai/af15b28e-6f3d-40c7-869a-cb24765e2023/6bdff75c.glb",
+        "hq_mesh_url": null,
+        "full_res_mesh_url": null
+      },
+      "imagery": {
+        "pano_url": "https://cdn.marble.worldlabs.ai/af15b28e-6f3d-40c7-869a-cb24765e2023/92dfa867-a870-478b-bdb4-77334f68b8f7_panos/rgb_0.png"
+      },
+      "splats": {
+        "spz_urls": {
+          "500k": "https://cdn.marble.worldlabs.ai/af15b28e-6f3d-40c7-869a-cb24765e2023/8a40fc2b-209e-4f49-b5f6-6302384f10f7_ceramic_500k.spz",
+          "100k": "https://cdn.marble.worldlabs.ai/af15b28e-6f3d-40c7-869a-cb24765e2023/10e5332b-70b1-43bd-894b-13a6e8e47367_dust_100k.spz",
+          "150k": "https://cdn.marble.worldlabs.ai/af15b28e-6f3d-40c7-869a-cb24765e2023/062e913d-4c5b-42d3-b520-2858ee5e9244_ceramic_150k.spz",
+          "full_res": "https://cdn.marble.worldlabs.ai/af15b28e-6f3d-40c7-869a-cb24765e2023/2b16f11b-96b7-4a03-b3c5-048b90d31766_ceramic.spz"
+        },
+        "semantics_metadata": {
+          "metric_scale_factor": 0.37634474,
+          "ground_plane_offset": 0.145416
+        }
+      },
+      "thumbnail_url": "https://cdn.marble.worldlabs.ai/af15b28e-6f3d-40c7-869a-cb24765e2023/e77d223a-f3ad-4991-a91b-e21065d4a41a_sand_mpi/thumbnail.webp",
+      "caption": "The scene is a spectacular arctic glacial crevasse at polar twilight, rendered with cinematic photorealism, evoking a profound sense of vertical scale and inherent danger. The overall tone is awe-inspiring and stark, highlighting the raw power and beauty of the polar environment. Jagged turquoise ice walls rise dramatically on all sides, their surfaces exhibiting luminous subsurface scattering that glows with an ethereal light. Enormous snowy mountain peaks loom in the distance, their white caps contrasting sharply with the deep indigo sky above. A deep blue abyss plunges into the depths of the crevasse, its unfathomable darkness hinting at immense geological forces. Fractured ice shelves hang precariously from the crevasse walls, appearing as if they could calve at any moment. Wisps of blowing snow drift across the scene, carried by unseen winds, adding to the dynamic and frigid atmosphere. A pale green aurora shimmers across the indigo sky, casting an otherworldly glow over the entire landscape. The viewpoint is from a broad, flat ice shelf, offering a commanding perspective across the vast chasm. The ice shelf itself is pristine and untouched, devoid of any human presence or infrastructure. The 360 scene is faultless."
+    },
+    "created_at": null,
+    "updated_at": null,
+    "permission": {
+      "public": false,
+      "allowed_readers": [],
+      "allowed_writers": [],
+      "allow_id_access": false
+    },
+    "world_prompt": null,
+    "world_marble_url": "https://marble.worldlabs.ai/world/af15b28e-6f3d-40c7-869a-cb24765e2023",
+    "model": null
+  },
+  "cost": {
+    "total_credits": 1580,
+    "line_items": [
+      {
+        "name": "Pano generation (text)",
+        "credits": 80
+      },
+      {
+        "name": "World generation",
+        "credits": 1500
+      }
+    ]
+  }
+}

@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>TRON Worlds · Demo slides</title>
+    <style>
+      @font-face {
+        font-family: Showcase;
+        src: url("/fonts/Lato-Regular.ttf");
+        font-weight: 400;
+      }
+      @font-face {
+        font-family: Showcase;
+        src: url("/fonts/Lato-Heavy.ttf");
+        font-weight: 800;
+      }
+      @font-face {
+        font-family: Telemetry;
+        src: url("/fonts/DejaVuSansMono.ttf");
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #0b121a;
+        color: #f0f6f5;
+        font-family: Showcase, sans-serif;
+      }
+      main {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding: 66px 86px;
+        background: radial-gradient(
+          ellipse at 100% 0%,
+          #1a333e55,
+          transparent 55%
+        );
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #34434a;
+        gap: 30px;
+      }
+      .brand {
+        font-size: 25px;
+        font-weight: 800;
+        letter-spacing: 0.22em;
+      }
+      .track {
+        font:
+          22px Telemetry,
+          monospace;
+        color: #9cead8;
+        letter-spacing: 0.02em;
+      }
+      .eyebrow {
+        font:
+          21px Telemetry,
+          monospace;
+        letter-spacing: 0.13em;
+        color: #9cead8;
+        margin: 0 0 27px;
+      }
+      h1 {
+        font-size: 76px;
+        line-height: 1.06;
+        letter-spacing: -0.025em;
+        font-weight: 800;
+        margin: 0 0 26px;
+      }
+      p {
+        font-size: 31px;
+        line-height: 1.4;
+        color: #b8cbd2;
+        margin: 0;
+      }
+      .problem {
+        padding-top: 72px;
+        position: relative;
+      }
+      .problem h1 {
+        width: 1150px;
+      }
+      .problem p {
+        width: 1050px;
+      }
+      .photo {
+        position: absolute;
+        right: 0;
+        top: 55px;
+        width: 420px;
+        height: 335px;
+        background:
+          linear-gradient(0deg, #0b121a11, #0b121a11),
+          url("/worlds/ice/panorama.jpg") center / cover;
+        border-radius: 10px;
+        border: 1px solid #778d9355;
+      }
+      .loop {
+        position: absolute;
+        left: 86px;
+        right: 86px;
+        bottom: 135px;
+      }
+      .steps {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 22px;
+      }
+      .step {
+        padding: 28px 29px 31px;
+        background: #13212b;
+        border: 1px solid #3d515b;
+        border-radius: 10px;
+        position: relative;
+      }
+      .step b {
+        display: block;
+        font: 18px Telemetry;
+        color: #9cead8;
+        margin-bottom: 18px;
+      }
+      .step strong {
+        display: block;
+        font-size: 30px;
+        font-weight: 800;
+      }
+      .step:not(:last-child)::after {
+        content: "→";
+        position: absolute;
+        right: -20px;
+        top: 61px;
+        font-size: 24px;
+        color: #a2c8c9;
+        z-index: 2;
+      }
+      footer {
+        position: absolute;
+        left: 86px;
+        right: 86px;
+        bottom: 50px;
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid #34434a;
+        padding-top: 25px;
+        color: #96aeb8;
+        font: 18px Telemetry;
+      }
+      .tech {
+        padding-top: 68px;
+      }
+      .tech h1 {
+        margin-bottom: 46px;
+      }
+      .columns {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+      }
+      .technology {
+        height: 388px;
+        padding: 42px;
+        background: #13212b;
+        border: 1px solid #3d515b;
+        border-radius: 12px;
+      }
+      .technology .eyebrow {
+        margin-bottom: 27px;
+        font-size: 22px;
+      }
+      .technology h2 {
+        font-size: 45px;
+        line-height: 1.25;
+        letter-spacing: -0.015em;
+        margin: 0 0 28px;
+        font-weight: 800;
+        max-width: 720px;
+      }
+      .technology p {
+        font-size: 27px;
+        color: #9bb2bf;
+      }
+      .client {
+        margin-top: 34px;
+        font-size: 25px;
+        color: #a5bcc5;
+      }
+      .tech footer {
+        color: #b6cdd1;
+      }
+    </style>
+  </head>
+  <body>
+    <main id="slide"></main>
+    <script>
+      const mechanics =
+        new URLSearchParams(location.search).get("slide") === "mechanics";
+      const tech =
+        new URLSearchParams(location.search).get("slide") === "technology";
+      document.getElementById("slide").innerHTML = mechanics
+        ? `
+<header><span class="brand">TRON / WORLDS</span><span class="track">GAMING &amp; INTERACTIVE WORLDS</span></header>
+<section class="problem"><p class="eyebrow">HOW TO PLAY</p><h1 style="font-size:72px;width:1020px">A lightcycle game.<br>The ribbon is a wall.</h1><p style="width:900px">Every bike leaves a solid wall of light.<br>Touch a ribbon — even your own — and you’re out.</p><p style="width:900px;margin-top:28px;color:#9cead8">Turn to trap rivals. Keep an escape route.</p></section>
+<svg viewBox="0 0 620 510" style="position:absolute;right:86px;top:228px;width:660px;height:550px" aria-label="A pink rival collides with the cyan player's ribbon">
+<rect x="1" y="1" width="618" height="508" rx="16" fill="#13212b" stroke="#3d515b"/>
+<path d="M110 440 V125 H515" fill="none" stroke="#42dcff" stroke-width="10" stroke-linejoin="round"/>
+<path d="M335 450 V146" fill="none" stroke="#ff5177" stroke-width="9"/>
+<path d="M322 207 L335 185 L348 207" fill="none" stroke="#ffced8" stroke-width="5"/>
+<rect x="488" y="110" width="54" height="29" rx="14" fill="#e9fbff" stroke="#42dcff" stroke-width="3"/>
+<circle cx="499" cy="109" r="7" fill="#8299a4"/><circle cx="532" cy="109" r="7" fill="#8299a4"/>
+<path d="M315 103 L355 143 M315 143 L355 103" stroke="#ffb9cb" stroke-width="7"/>
+<text x="150" y="90" fill="#92eaff" font-family="Showcase" font-size="25">Your solid ribbon</text>
+<text x="372" y="185" fill="#ffd3de" font-family="Showcase" font-size="24">Collision</text><text x="372" y="216" fill="#ffd3de" font-family="Showcase" font-size="24">= elimination</text>
+<text x="375" y="387" fill="#ffb9cb" font-family="Showcase" font-size="24">Rival rider</text>
+</svg>
+<footer><span>STEER / BOOST / JUMP / OUTMANEUVER</span><span>TOUCH A LIGHT WALL → CRASH → RETRY</span></footer>`
+        : tech
+          ? `
+<header><span class="brand">TRON / WORLDS</span><span class="track">GAMING &amp; INTERACTIVE WORLDS</span></header>
+<section class="tech"><p class="eyebrow">TECHNOLOGY ROLES</p><h1>What makes it work.</h1><div class="columns">
+<article class="technology"><p class="eyebrow">WORLD LABS / MARBLE</p><h2>Generates the four<br>3D surroundings.</h2><p>City · canyon · ice · reactor</p></article>
+<article class="technology"><p class="eyebrow">CONVEX</p><h2>Saves runs and streams<br>leaderboard updates.</h2><p>Optional shared score backend</p></article>
+</div><p class="client">Three.js + Spark render the game. Controls and lethal trail collisions run locally.</p></section>
+<footer><span>GENERATED SURROUNDINGS / AUTHORED GAME COURSES</span><span>PLAY ALL FOUR WORLDS</span></footer>`
+          : `
+<header><span class="brand">TRON / WORLDS</span><span class="track">GAMING &amp; INTERACTIVE WORLDS</span></header>
+<section class="problem"><p class="eyebrow">THE PROBLEM</p><h1>Generated worlds need<br>playable challenges.</h1><p>Responsive controls. Clear goals. Real consequences.</p><div class="photo" aria-hidden="true"></div></section>
+<section class="loop"><p class="eyebrow">THE INTERACTION LOOP</p><div class="steps">
+<div class="step"><b>01</b><strong>Choose a world</strong></div><div class="step"><b>02</b><strong>Ride &amp; react</strong></div><div class="step"><b>03</b><strong>Escape or survive</strong></div><div class="step"><b>04</b><strong>Score &amp; retry</strong></div>
+</div></section><footer><span>FOUR WORLDS / FOUR MISSIONS</span><span>YOUR INPUT. YOUR ROUTE. YOUR RESULT.</span></footer>`;
+    </script>
+  </body>
+</html>

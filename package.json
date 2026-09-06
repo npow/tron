@@ -1,0 +1,33 @@
+{
+  "name": "tron-worlds-showcase",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 4173",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 0.0.0.0 --port 4173",
+    "capture": "node scripts/capture.mjs",
+    "test": "node --test showcase/*.test.mjs",
+    "verify": "node scripts/verify.mjs",
+    "backend": "CONVEX_AGENT_MODE=anonymous convex dev --tail-logs disable",
+    "present": "node scripts/presentation.mjs",
+    "record-play": "node scripts/record-play.mjs"
+  },
+  "dependencies": {
+    "@sparkjsdev/spark": "^2.1.0",
+    "convex": "^1.45.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "three": "^0.185.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@types/three": "^0.185.4",
+    "@vitejs/plugin-react": "^4.3.4",
+    "playwright": "^1.55.0",
+    "typescript": "^5.7.3",
+    "vite": "^6.2.0"
+  }
+}

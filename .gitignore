@@ -1,0 +1,14 @@
+node_modules/
+dist/
+artifacts/
+__pycache__/
+
+.env
+.env.local
+.env.*.local
+
+.convex/
+
+# The standalone game ships its generated World Labs environments.
+!public/worlds/*/*.spz
+!public/worlds/*/collider.glb

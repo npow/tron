@@ -1,0 +1,50 @@
+[
+  {
+    "id": "city",
+    "name": "Meridian city",
+    "provider": "World Labs Marble",
+    "model": "marble-1.1",
+    "worldId": "56e5dd6e-6308-4c53-8026-cb57e584a402",
+    "url": "https://marble.worldlabs.ai/world/56e5dd6e-6308-4c53-8026-cb57e584a402",
+    "panorama": "./worlds/city/panorama.jpg",
+    "splat": "./worlds/city/scene.spz",
+    "collider": "./worlds/city/collider.glb",
+    "fullResolutionSplat": "./worlds/city/scene-full.spz"
+  },
+  {
+    "id": "desert",
+    "name": "Solar wasteland",
+    "provider": "World Labs Marble",
+    "model": "marble-1.1",
+    "worldId": "c6e8befc-8d11-41f4-a112-ae3f5aab423f",
+    "url": "https://marble.worldlabs.ai/world/c6e8befc-8d11-41f4-a112-ae3f5aab423f",
+    "panorama": "./worlds/desert/panorama.jpg",
+    "splat": "./worlds/desert/scene.spz",
+    "collider": "./worlds/desert/collider.glb",
+    "fullResolutionSplat": "./worlds/desert/scene-full.spz"
+  },
+  {
+    "id": "ice",
+    "name": "Cryo pass",
+    "provider": "World Labs Marble",
+    "model": "marble-1.1",
+    "worldId": "af15b28e-6f3d-40c7-869a-cb24765e2023",
+    "url": "https://marble.worldlabs.ai/world/af15b28e-6f3d-40c7-869a-cb24765e2023",
+    "panorama": "./worlds/ice/panorama.jpg",
+    "splat": "./worlds/ice/scene.spz",
+    "collider": "./worlds/ice/collider.glb",
+    "fullResolutionSplat": "./worlds/ice/scene-full.spz"
+  },
+  {
+    "id": "reactor",
+    "name": "The core",
+    "provider": "World Labs Marble",
+    "model": "marble-1.1",
+    "worldId": "147eee7f-68b1-41f4-ac98-6ea0c010a5ac",
+    "url": "https://marble.worldlabs.ai/world/147eee7f-68b1-41f4-ac98-6ea0c010a5ac",
+    "panorama": "./worlds/reactor/panorama.jpg",
+    "splat": "./worlds/reactor/scene.spz",
+    "collider": "./worlds/reactor/collider.glb",
+    "fullResolutionSplat": "./worlds/reactor/scene-full.spz"
+  }
+]

@@ -1,0 +1,43 @@
+{
+  "world_id": "147eee7f-68b1-41f4-ac98-6ea0c010a5ac",
+  "display_name": "TRON / The core",
+  "tags": null,
+  "assets": {
+    "mesh": {
+      "collider_mesh_url": "https://cdn.marble.worldlabs.ai/147eee7f-68b1-41f4-ac98-6ea0c010a5ac/efaa56b5.glb",
+      "hq_mesh_url": null,
+      "full_res_mesh_url": null
+    },
+    "imagery": {
+      "pano_url": "https://cdn.marble.worldlabs.ai/147eee7f-68b1-41f4-ac98-6ea0c010a5ac/835bb705-2a21-4aa4-9065-8681ddc1e665_panos/rgb_0.png"
+    },
+    "splats": {
+      "spz_urls": {
+        "500k": "https://cdn.marble.worldlabs.ai/147eee7f-68b1-41f4-ac98-6ea0c010a5ac/c95f5bb9-9ef0-4e35-8a0a-d4da0dc358a6_ceramic_500k.spz",
+        "100k": "https://cdn.marble.worldlabs.ai/147eee7f-68b1-41f4-ac98-6ea0c010a5ac/982bca1f-933b-4d78-ae1d-eb1d9d63f324_dust_100k.spz",
+        "150k": "https://cdn.marble.worldlabs.ai/147eee7f-68b1-41f4-ac98-6ea0c010a5ac/57ad4c68-be0d-46b9-a231-fe977f11c514_ceramic_150k.spz",
+        "full_res": "https://cdn.marble.worldlabs.ai/147eee7f-68b1-41f4-ac98-6ea0c010a5ac/685f7ee7-de70-440a-931f-9f7f20f619a1_ceramic.spz"
+      },
+      "semantics_metadata": {
+        "metric_scale_factor": 0.695315957069397,
+        "ground_plane_offset": 0.37414199113845825
+      }
+    },
+    "thumbnail_url": "https://cdn.marble.worldlabs.ai/147eee7f-68b1-41f4-ac98-6ea0c010a5ac/d3932b74-b0be-4b6c-a3ee-8a52a2ea2d24_sand_mpi/thumbnail.webp",
+    "caption": "The scene is a cinematic, photorealistic science fiction interior, depicting an immense alien fusion reactor cathedral with a dark, awe-inspiring tone. The atmosphere is one of immense scale and advanced, mysterious technology. The central feature is a gigantic industrial chamber, functioning as a rectangular arena. Towering black titanium walls rise dramatically, intricately detailed with complex machinery and glowing violet energy conduits that crisscross the surfaces. Red warning lights punctuate the darkness, casting an ominous glow across various components. High above the floor, suspended concentrically, are massive magnetic rings that encircle a brilliant plasma core, which emits an intense, pulsating light. Volumetric shafts of light pierce through the vast space, highlighting the immense depth and architectural detail of the structure. The center floor is a huge, empty, flat dark metallic square, reflecting the ambient light and contributing to the sense of vastness. "
+  },
+  "created_at": "2026-09-05T23:09:39Z",
+  "updated_at": "2026-09-05T23:24:34Z",
+  "permission": {
+    "public": false,
+    "allowed_readers": [],
+    "allowed_writers": [],
+    "allow_id_access": false
+  },
+  "world_prompt": {
+    "text_prompt": "The scene is a cinematic, photorealistic science fiction interior, depicting an immense alien fusion reactor cathedral with a dark, awe-inspiring tone. The atmosphere is one of immense scale and advanced, mysterious technology. The central feature is a gigantic industrial chamber, functioning as a rectangular arena. Towering black titanium walls rise dramatically, intricately detailed with complex machinery and glowing violet energy conduits that crisscross the surfaces. Red warning lights punctuate the darkness, casting an ominous glow across various components. High above the floor, suspended concentrically, are massive magnetic rings that encircle a brilliant plasma core, which emits an intense, pulsating light. Volumetric shafts of light pierce through the vast space, highlighting the immense depth and architectural detail of the structure. The center floor is a huge, empty, flat dark metallic square, reflecting the ambient light and contributing to the sense of vastness. The 360 scene is faultless.",
+    "type": "text"
+  },
+  "world_marble_url": "https://marble.worldlabs.ai/world/147eee7f-68b1-41f4-ac98-6ea0c010a5ac",
+  "model": "marble-1.1"
+}

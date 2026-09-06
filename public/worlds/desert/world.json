@@ -1,0 +1,43 @@
+{
+  "world_id": "c6e8befc-8d11-41f4-a112-ae3f5aab423f",
+  "display_name": "TRON / Solar wasteland",
+  "tags": null,
+  "assets": {
+    "mesh": {
+      "collider_mesh_url": "https://cdn.marble.worldlabs.ai/c6e8befc-8d11-41f4-a112-ae3f5aab423f/24c41a5c.glb",
+      "hq_mesh_url": null,
+      "full_res_mesh_url": null
+    },
+    "imagery": {
+      "pano_url": "https://cdn.marble.worldlabs.ai/c6e8befc-8d11-41f4-a112-ae3f5aab423f/947b838c-c25d-468c-a08c-3e1a1213913d_panos/rgb_0.png"
+    },
+    "splats": {
+      "spz_urls": {
+        "500k": "https://cdn.marble.worldlabs.ai/c6e8befc-8d11-41f4-a112-ae3f5aab423f/777a270c-28e0-4d7c-b00f-fe284714da3a_ceramic_500k.spz",
+        "100k": "https://cdn.marble.worldlabs.ai/c6e8befc-8d11-41f4-a112-ae3f5aab423f/bd8a47f0-f466-4aae-9ab0-4e9d7aa4064d_dust_100k.spz",
+        "150k": "https://cdn.marble.worldlabs.ai/c6e8befc-8d11-41f4-a112-ae3f5aab423f/dfcb0355-6cb6-4873-8cdb-c8ca4c2f0213_ceramic_150k.spz",
+        "full_res": "https://cdn.marble.worldlabs.ai/c6e8befc-8d11-41f4-a112-ae3f5aab423f/8cb6b97f-f234-43d6-acb6-53613b7f4758_ceramic.spz"
+      },
+      "semantics_metadata": {
+        "metric_scale_factor": 1.0335369110107422,
+        "ground_plane_offset": 0.5204484462738037
+      }
+    },
+    "thumbnail_url": "https://cdn.marble.worldlabs.ai/c6e8befc-8d11-41f4-a112-ae3f5aab423f/b477ed53-4a84-4ab8-94c7-792e53d39b7f_sand_mpi/thumbnail.webp",
+    "caption": "The scene is a magnificent open red sandstone desert canyon at golden sunset, rendered in a photorealistic cinematic science fiction frontier style. The overall tone is awe-inspiring and vast, evoking a sense of ancient grandeur and subtle mystery. Monument Valley-scale sheer stratified orange cliffs and eroded arches tower majestically on both sides of a broad, winding, dry sandy riverbed. These colossal rock formations display intricate wind-carved patterns, showcasing millennia of natural erosion. Warm sunlight bathes the scene, illuminating dust motes suspended in the air, creating a soft, ethereal glow. In the far distance, flat-topped mesas rise from the desert floor, adding layers of depth to the expansive landscape. The sky above transitions from a deep blue at the zenith to soft peach hues near the horizon, reflecting the golden hour. Subtly integrated between distant cliffs are abandoned industrial blast doors, hinting at a forgotten past or a hidden future within this natural wonder. The foreground consists of open, empty, flat sandy ground, stretching out to meet the towering geological features. "
+  },
+  "created_at": "2026-09-05T23:09:24Z",
+  "updated_at": "2026-09-05T23:23:16Z",
+  "permission": {
+    "public": false,
+    "allowed_readers": [],
+    "allowed_writers": [],
+    "allow_id_access": false
+  },
+  "world_prompt": {
+    "text_prompt": "The scene is a magnificent open red sandstone desert canyon at golden sunset, rendered in a photorealistic cinematic science fiction frontier style. The overall tone is awe-inspiring and vast, evoking a sense of ancient grandeur and subtle mystery. Monument Valley-scale sheer stratified orange cliffs and eroded arches tower majestically on both sides of a broad, winding, dry sandy riverbed. These colossal rock formations display intricate wind-carved patterns, showcasing millennia of natural erosion. Warm sunlight bathes the scene, illuminating dust motes suspended in the air, creating a soft, ethereal glow. In the far distance, flat-topped mesas rise from the desert floor, adding layers of depth to the expansive landscape. The sky above transitions from a deep blue at the zenith to soft peach hues near the horizon, reflecting the golden hour. Subtly integrated between distant cliffs are abandoned industrial blast doors, hinting at a forgotten past or a hidden future within this natural wonder. The foreground consists of open, empty, flat sandy ground, stretching out to meet the towering geological features. The 360 scene is faultless.",
+    "type": "text"
+  },
+  "world_marble_url": "https://marble.worldlabs.ai/world/c6e8befc-8d11-41f4-a112-ae3f5aab423f",
+  "model": "marble-1.1"
+}

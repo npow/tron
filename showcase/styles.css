@@ -1,0 +1,605 @@
+@font-face {
+  font-family: Showcase;
+  src: url("/fonts/Lato-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: Showcase;
+  src: url("/fonts/Lato-Heavy.ttf") format("truetype");
+  font-weight: 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: Telemetry;
+  src: url("/fonts/DejaVuSansMono.ttf") format("truetype");
+  font-display: swap;
+}
+:root {
+  font-family: Showcase, Arial, sans-serif;
+  color: #e4edeb;
+  background: #080c12;
+  font-synthesis: none;
+  color-scheme: dark;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+button,
+a,
+input {
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  font: inherit;
+}
+button,
+a {
+  touch-action: manipulation;
+}
+button {
+  cursor: pointer;
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 2px solid #87efcf;
+  outline-offset: 5px;
+}
+button:disabled {
+  opacity: 0.4;
+  cursor: wait;
+}
+.app {
+  height: 100dvh;
+  min-height: 580px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 32px;
+  max-width: 2000px;
+  margin: auto;
+}
+.topbar {
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ffffff0c;
+  gap: 20px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 0.25em;
+}
+.brand-mark {
+  display: block;
+  width: 29px;
+  height: 27px;
+  border-top: 5px solid #8fe6d2;
+  border-bottom: 5px solid #8fe6d2;
+  transform: skew(-18deg);
+  position: relative;
+}
+.brand-mark:after {
+  content: "";
+  position: absolute;
+  height: 9px;
+  width: 21px;
+  top: 4px;
+  left: 4px;
+  border-top: 4px solid #8fe6d2;
+}
+.brand span {
+  font-size: 11px;
+  color: #7f919d;
+  letter-spacing: 0.18em;
+  font-weight: 400;
+  border-left: 1px solid #354048;
+  padding-left: 17px;
+  margin-left: 5px;
+}
+.top-actions {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.top-label {
+  font:
+    10px Telemetry,
+    monospace;
+  letter-spacing: 0.06em;
+  color: #899aa6;
+  margin-right: 18px;
+}
+.button {
+  background: #111a22;
+  color: #bcc9cf;
+  border: 1px solid #2a3741;
+  border-radius: 7px;
+  padding: 10px 15px;
+  font-size: 12px;
+  display: inline-flex;
+  gap: 9px;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  text-decoration: none;
+}
+.button:hover {
+  background: #1c2a33;
+  color: #fff;
+}
+.button.primary {
+  background: #9cead8;
+  color: #0c201c;
+  border-color: #9cead8;
+}
+.button.primary:hover {
+  background: #bcf4e5;
+}
+.button.active {
+  color: #a3eddd;
+  border-color: #537f78;
+}
+.viewer-wrap {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 0;
+  position: relative;
+}
+.viewer {
+  width: 100%;
+  max-height: 100%;
+  aspect-ratio: 16/9;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #243039;
+  border-radius: 11px;
+  background: #0b121b;
+  box-shadow: 0 18px 65px #0005;
+}
+.viewer canvas {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.viewer-wrap.fit-height .viewer {
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+}
+.viewer:fullscreen {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 0;
+  background: #000;
+}
+.viewer:fullscreen canvas {
+  object-fit: contain;
+}
+.loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+  background: #080d14;
+  color: #a4b8c0;
+  font:
+    12px Telemetry,
+    monospace;
+}
+.loading-dot {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #2d4747;
+  border-top-color: #99e8d5;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.transport {
+  padding: 1px 0 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.scrubber {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+.timecode {
+  font:
+    11px Telemetry,
+    monospace;
+  color: #a9b9c0;
+  min-width: 89px;
+  white-space: nowrap;
+}
+.timecode span {
+  color: #596e7a;
+}
+.timeline {
+  height: 16px;
+  flex: 1;
+  accent-color: #a5e6d7;
+  cursor: pointer;
+}
+.control-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+}
+.playback {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.icon-button {
+  background: none;
+  border: 1px solid #29353d;
+  border-radius: 6px;
+  color: #becbd1;
+  min-width: 37px;
+  height: 34px;
+  font-size: 16px;
+}
+.icon-button:hover {
+  background: #203038;
+}
+.world-tabs {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.world-tab {
+  font-size: 11px;
+  border: 1px solid transparent;
+  background: none;
+  color: #899da8;
+  padding: 8px 11px;
+  border-radius: 5px;
+}
+.world-tab:hover {
+  color: #e6edee;
+  background: #152029;
+}
+.world-tab.selected {
+  background: #142129;
+  border-color: #344954;
+  color: #d9eee8;
+}
+.world-tab em {
+  font:
+    9px Telemetry,
+    monospace;
+  font-style: normal;
+  color: var(--accent);
+  margin-right: 7px;
+}
+.key-hint {
+  font-size: 11px;
+  color: #6f8792;
+  white-space: nowrap;
+}
+.key-hint kbd {
+  font:
+    10px Telemetry,
+    monospace;
+  border: 1px solid #35434c;
+  border-radius: 3px;
+  padding: 2px 5px;
+  color: #a0b2bc;
+  margin: 0 3px;
+}
+.error {
+  padding: 30px;
+  max-width: 550px;
+  text-align: center;
+  line-height: 1.7;
+}
+.ride-instructions {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #09131ded;
+  border: 1px solid #3b555e;
+  border-radius: 8px;
+  padding: 10px 16px;
+  color: #b8cdce;
+  font-size: 12px;
+  white-space: nowrap;
+  pointer-events: none;
+}
+.capture-mode .app {
+  padding: 0;
+  min-height: 0;
+  display: block;
+  height: 100vh;
+  max-width: none;
+}
+.capture-mode .topbar,
+.capture-mode .transport {
+  display: none;
+}
+.capture-mode .viewer-wrap {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+.capture-mode .viewer {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  width: 100%;
+  height: 100%;
+  max-height: none;
+}
+.capture-mode .ride-instructions {
+  display: none;
+}
+.record-status {
+  font:
+    11px Telemetry,
+    monospace;
+  color: #f1cba3;
+}
+.muted {
+  font-size: 11px;
+  color: #6e8490;
+}
+.mobile-help {
+  display: none;
+}
+@media (max-width: 950px) {
+  .app {
+    padding: 0 16px;
+  }
+  .topbar {
+    min-height: 65px;
+  }
+  .top-label,
+  .key-hint,
+  .brand span {
+    display: none;
+  }
+  .world-tab {
+    padding: 8px;
+  }
+  .world-tabs {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .control-row {
+    align-items: flex-start;
+  }
+  .top-actions {
+    gap: 6px;
+  }
+  .button {
+    padding: 8px 10px;
+    font-size: 11px;
+  }
+  .brand {
+    font-size: 14px;
+  }
+  .viewer-wrap {
+    padding: 14px 0;
+  }
+  .transport {
+    padding-bottom: 14px;
+  }
+}
+@media (max-width: 600px) {
+  .app {
+    min-height: 470px;
+  }
+  .topbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 12px 0;
+    gap: 12px;
+  }
+  .brand {
+    width: 100%;
+    justify-content: center;
+  }
+  .control-row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .world-tabs {
+    justify-content: center;
+  }
+  .viewer-wrap {
+    flex: 1;
+  }
+  .button {
+    font-size: 11px;
+  }
+  .top-actions .muted {
+    display: none;
+  }
+  .ride-instructions {
+    font-size: 9px;
+    white-space: normal;
+    width: 90%;
+    text-align: center;
+  }
+  .mobile-help {
+    display: block;
+    font-size: 11px;
+    color: #8a9aa4;
+    text-align: center;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .loading-dot {
+    animation: none;
+  }
+}
+.mission-overlay {
+  position: absolute;
+  left: 50%;
+  top: 42%;
+  transform: translate(-50%, -50%);
+  width: min(520px, 80%);
+  padding: 30px;
+  text-align: center;
+  background: #101b27ee;
+  border: 1px solid #b3cbd033;
+  border-radius: 14px;
+  backdrop-filter: blur(18px);
+  box-shadow: 0 20px 80px #0006;
+}
+.mission-overlay h2 {
+  font-size: clamp(24px, 3vw, 44px);
+  margin: 10px 0 14px;
+  letter-spacing: -0.04em;
+}
+.mission-overlay p {
+  color: #c2d0d7;
+  line-height: 1.5;
+  margin: 9px 0;
+}
+.mission-overlay .mission-help {
+  font-size: 13px;
+  color: #8ca3b1;
+}
+.mission-eyebrow {
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  color: #abc6d1;
+}
+.touch-controls {
+  position: absolute;
+  bottom: 42px;
+  left: 15px;
+  right: 15px;
+  display: none;
+  justify-content: center;
+  gap: 8px;
+  touch-action: none;
+}
+.touch-controls button {
+  background: #132431df;
+  color: #effaff;
+  border: 1px solid #c7e9ff55;
+  border-radius: 9px;
+  padding: 14px 18px;
+  touch-action: none;
+  user-select: none;
+}
+@media (pointer: coarse) {
+  .touch-controls {
+    display: flex;
+  }
+  .ride-instructions {
+    display: none;
+  }
+  .mission-overlay {
+    padding: 15px;
+  }
+  .touch-controls button {
+    padding: 12px 9px;
+  }
+}
+.run-board {
+  padding: 10px 24px;
+  background: #0c151e;
+  border-top: 1px solid #b3cbd022;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-size: 12px;
+  color: #a6bac5;
+  flex-wrap: wrap;
+}
+.run-board label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.run-board input {
+  background: #1b2a34;
+  color: #e0ecef;
+  border: 1px solid #768e9b55;
+  border-radius: 5px;
+  padding: 6px 9px;
+  width: 145px;
+  font: inherit;
+}
+.leader-rows {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.leader-rows b {
+  color: #d3e3e8;
+  font-weight: 500;
+}
+.run-sync {
+  font-size: 11px;
+  color: #7fa99d;
+}
+
+.game-scrubber {
+  display: none;
+}
+.start-mission {
+  margin-top: 12px;
+  min-width: 170px;
+  font-size: 15px;
+}
+@media (max-width: 600px) {
+  .app {
+    min-height: 720px;
+  }
+  .viewer {
+    aspect-ratio: 4/3;
+  }
+  .mission-overlay {
+    width: 90%;
+    padding: 12px;
+    top: 45%;
+  }
+  .mission-overlay h2 {
+    font-size: 24px;
+    margin: 6px 0;
+  }
+  .mission-overlay p,
+  .mission-overlay .mission-help {
+    font-size: 11px;
+    margin: 5px 0;
+  }
+  .start-mission {
+    margin-top: 5px;
+    font-size: 12px;
+  }
+  .touch-controls {
+    bottom: 8px;
+    gap: 5px;
+  }
+}

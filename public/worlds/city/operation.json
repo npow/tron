@@ -1,0 +1,70 @@
+{
+  "operation_id": "c5ab85e4-1c8f-4c51-af9b-20b79666d906",
+  "created_at": "2026-09-05T23:09:08Z",
+  "updated_at": "2026-09-05T23:24:28Z",
+  "expires_at": "2026-09-06T02:09:08Z",
+  "done": true,
+  "error": null,
+  "metadata": {
+    "progress": {
+      "status": "SUCCEEDED",
+      "description": "World generation completed successfully"
+    },
+    "world_id": "56e5dd6e-6308-4c53-8026-cb57e584a402",
+    "operation_type": "world_generation",
+    "public_model_name": "marble-1.1"
+  },
+  "response": {
+    "world_id": "56e5dd6e-6308-4c53-8026-cb57e584a402",
+    "display_name": "",
+    "tags": null,
+    "assets": {
+      "mesh": {
+        "collider_mesh_url": "https://cdn.marble.worldlabs.ai/56e5dd6e-6308-4c53-8026-cb57e584a402/449ee76e.glb",
+        "hq_mesh_url": null,
+        "full_res_mesh_url": null
+      },
+      "imagery": {
+        "pano_url": "https://cdn.marble.worldlabs.ai/56e5dd6e-6308-4c53-8026-cb57e584a402/02445012-0ebb-4c1e-81fd-4f58ccd4b88b_panos/rgb_0.png"
+      },
+      "splats": {
+        "spz_urls": {
+          "500k": "https://cdn.marble.worldlabs.ai/56e5dd6e-6308-4c53-8026-cb57e584a402/184b50d3-da85-4947-8a0d-7222fc229077_ceramic_500k.spz",
+          "100k": "https://cdn.marble.worldlabs.ai/56e5dd6e-6308-4c53-8026-cb57e584a402/e1e5d79e-7e5d-45da-81f2-929e3f42df46_dust_100k.spz",
+          "150k": "https://cdn.marble.worldlabs.ai/56e5dd6e-6308-4c53-8026-cb57e584a402/fbd313d4-dc16-4a99-819f-82c73cb60330_ceramic_150k.spz",
+          "full_res": "https://cdn.marble.worldlabs.ai/56e5dd6e-6308-4c53-8026-cb57e584a402/5ae1f01b-1dfd-4c4a-bfc4-2fc076aa69ed_ceramic.spz"
+        },
+        "semantics_metadata": {
+          "metric_scale_factor": 3.2332733,
+          "ground_plane_offset": 1.711015
+        }
+      },
+      "thumbnail_url": "https://cdn.marble.worldlabs.ai/56e5dd6e-6308-4c53-8026-cb57e584a402/bc4c5248-b67c-4616-8b3a-0cbf14fd0d20_sand_mpi/thumbnail.webp",
+      "caption": "The scene is a vast, futuristic megacity at blue hour, rendered with contemporary AAA game cinematic quality and photorealistic detail. The overall tone is awe-inspiring and dramatic, showcasing a technologically advanced urban landscape. The viewer is positioned at street level within an open, empty intersection, surrounded by immense, richly detailed towers that pierce the twilight sky. Elevated monorail tracks crisscross the upper levels of the cityscape, their sleek forms hinting at advanced transportation systems. The architectural lighting is restrained and predominantly white, providing subtle illumination to the brushed titanium facades and expansive glass curtain walls of the towering structures. Warm interior lights glow from countless windows, creating a striking contrast against the cool blue hour. The ground is flat and unobstructed at the center of the intersection, paved with wet asphalt that reflects the city lights and the deep blue sky above. Dense infrastructure is visible everywhere, from intricate pedestrian walkways to complex utility conduits integrated into the buildings. In the distance, a spectacular skyline stretches across the horizon, a testament to the city's immense scale. Restrained accents of cyan lighting subtly highlight architectural features without resorting to retro neon aesthetics or wireframe art. The broad, straight streets extend into a deep perspective, emphasizing the city's grandeur and navigability. The 360 scene is faultless."
+    },
+    "created_at": null,
+    "updated_at": null,
+    "permission": {
+      "public": false,
+      "allowed_readers": [],
+      "allowed_writers": [],
+      "allow_id_access": false
+    },
+    "world_prompt": null,
+    "world_marble_url": "https://marble.worldlabs.ai/world/56e5dd6e-6308-4c53-8026-cb57e584a402",
+    "model": null
+  },
+  "cost": {
+    "total_credits": 1580,
+    "line_items": [
+      {
+        "name": "Pano generation (text)",
+        "credits": 80
+      },
+      {
+        "name": "World generation",
+        "credits": 1500
+      }
+    ]
+  }
+}
